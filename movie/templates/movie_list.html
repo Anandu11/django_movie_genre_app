@@ -1,0 +1,25 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+</head>
+<body>
+    <h1>Movie List</h1>
+    <ul>
+        {% for movie in movies %}
+            <li><a href="{% url 'movie_detail' pk=movie.pk %}">{{ movie.title }}</a></li>
+        {% endfor %}
+    </ul>
+    <button><a href="{% url 'create_movie' %}">Create New Movie</a></button>
+    
+
+<button><a href="{% url 'movie_list' %}">View Movie List</a></button>
+
+<button><a href="{% url 'movie_list' %}">Update Movie List</a></button>
+
+</body>
+</html>

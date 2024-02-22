@@ -1,0 +1,17 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ movie.title }} Details</title>
+</head>
+<body>
+    <h1>{{ movie.title }} Details</h1>
+    <p>Release Date: {{ movie.release_date }}</p>
+    <p>Duration: {{ movie.duration }} minutes</p>
+    <p>Summary: {{ movie.summary }}</p>
+    <p>Genre: <a href="{% url 'genre_detail' pk=movie.genre.pk %}">{{ movie.genre.name }}</a></p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genre List</title>
+</head>
+<body>
+    <h1>Genre List</h1>
+    <ul>
+        {% for genre in genres %}
+            <li><a href="{% url 'genre_detail' pk=genre.pk %}">{{ genre.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <button><a href="{% url 'create_genre' %}">Create New Genre</a></button>
+    
+
+<button><a href="{% url 'genre_list' %}">View Genre List</a></button>
+<button><a href="{% url 'genre_list' %}">Update Genre List</a></button>
+
+</body>
+</html>
